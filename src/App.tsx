@@ -1,9 +1,14 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+interface AppProps {
+  test: string
+}
+
+function App({test}: AppProps) {
   return (
     <div className="App">
+      <h1>{test}</h1>
     </div>
   );
 }
