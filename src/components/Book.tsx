@@ -10,12 +10,12 @@ export default function Book() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    fetch(`https://www.googleapis.com/books/v1/volumes?q=flowers&key=AIzaSyCgGlkvNQgkSXMQSXdnenB2EoCnaAG2Z9c`)
+    const randomLetter = 's';
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=${randomLetter}&key=AIzaSyCgGlkvNQgkSXMQSXdnenB2EoCnaAG2Z9c`)
   .then(response => response.json())
   .then(result => {
-    setBook(result)
+    console.log(result.items[1])
   })
-    console.log(book);
   };
   
   return (
