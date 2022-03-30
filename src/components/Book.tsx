@@ -28,6 +28,7 @@ export default function Book() {
       <BookInfo />
       <form>
         <button type="submit" onClick={handleSubmit}>
+          Get Book
         </button>
       </form>
     </div>

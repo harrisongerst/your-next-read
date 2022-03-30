@@ -1,9 +1,13 @@
 import React from 'react'
 
-export default function BookCover() {
+interface CoverProps {
+  coverImg?: string,
+}
+
+export default function BookCover({ coverImg = 'https://books.google.com/books/content/images/frontcover/buc0AAAAMAAJ?fife=w400-h600' }: CoverProps) {
   return (
     <div>
-      <img src='https://edit.org/images/cat/book-covers-big-2019101610.jpg' alt='book cover'/>
+      <img src={coverImg} alt='book cover'/>
     </div>
   )
 }
