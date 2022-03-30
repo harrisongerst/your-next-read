@@ -6,10 +6,13 @@ interface infoProps {
 }
 
 export default function BookInfo({title, authors}: infoProps) {
+  const author = authors.map((author) => 
+    <p>{author}</p>
+  )
   return (
     <div>
       <h3>{title}</h3>
-      <p>{authors}</p>
+      <p>{author}</p>
     </div>
   )
 }
