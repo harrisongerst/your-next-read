@@ -99,7 +99,7 @@ export default function Book() {
   return (
     <div>
       <BookCover coverImg={book.volumeInfo.imageLinks.smallThumbnail} />
-      <BookInfo />
+      <BookInfo title={book.volumeInfo.title} authors={book.volumeInfo.authors}/>
       <form>
         <button type="submit" onClick={handleSubmit}>
           Get Book
