@@ -1,12 +1,13 @@
 import React from "react";
-import { useState } from "react";
-
+import { useState, useEffect } from "react";
+import BookCover from "./BookCover";
+import BookInfo from "./BookInfo";
 
 
 
 
 export default function Book() {
-  const [book, setBook] = useState(null);
+  const [book, setBook] = useState();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,9 +24,10 @@ export default function Book() {
   
   return (
     <div>
+      <BookCover />
+      <BookInfo />
       <form>
         <button type="submit" onClick={handleSubmit}>
-          Get Book
         </button>
       </form>
     </div>
