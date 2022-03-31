@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 
-export const CoverImg = styled.div`
-    margin: 25px 50px 75px 100px;
+export const CoverImg = styled.img`
+    float: left;
+    width:  150px;
+    height: 225px;
+    object-fit: cover;
 `

@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import BookCover from "./BookCover";
 import BookInfo from "./BookInfo";
 import { Container } from "./styled/Container.styled";
-import { CoverImg } from "./styled/CoverImg.styled";
 import { Info } from "./styled/Info.styled"
 import { Button } from "./styled/GetButton.styled";
 
@@ -101,9 +100,7 @@ export default function Book() {
   return (
     <div>
       <Container>
-        <CoverImg>
           <BookCover coverImg={book.volumeInfo.imageLinks.smallThumbnail} />
-        </CoverImg>
         <Info>
           <BookInfo title={book.volumeInfo.title} authors={book.volumeInfo.authors}/>
         </Info>
