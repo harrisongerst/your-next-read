@@ -2,7 +2,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import BookCover from "./BookCover";
 import BookInfo from "./BookInfo";
-
+import { Container } from "./styled/Container.styled";
+import { CoverImg } from "./styled/CoverImg.styled";
+import { Info } from "./styled/Info.styled"
 
 
 
@@ -92,19 +94,27 @@ export default function Book() {
   .then(response => response.json())
   .then(result => {
     setBook(result.items[Math.floor(Math.random()*10)])
-    console.log(book)
   })
   };
   
   return (
     <div>
-      <BookCover coverImg={book.volumeInfo.imageLinks.smallThumbnail} />
-      <BookInfo title={book.volumeInfo.title} authors={book.volumeInfo.authors}/>
-      <form>
-        <button type="submit" onClick={handleSubmit}>
-          Get Book
-        </button>
-      </form>
+      <Container>
+        <CoverImg>
+          <BookCover coverImg={book.volumeInfo.imageLinks.smallThumbnail} />
+        </CoverImg>
+        <Info>
+          <BookInfo title={book.volumeInfo.title} authors={book.volumeInfo.authors}/>
+        </Info>
+      </Container>
+      <Container>
+        <form>
+          <button type="submit" onClick={handleSubmit}>
+            Get Book
+          </button>
+        </form>
+      </Container>
+      
     </div>
   );
 }
