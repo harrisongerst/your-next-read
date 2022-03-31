@@ -5,6 +5,7 @@ import BookInfo from "./BookInfo";
 import { Container } from "./styled/Container.styled";
 import { CoverImg } from "./styled/CoverImg.styled";
 import { Info } from "./styled/Info.styled"
+import { Button } from "./styled/GetButton.styled";
 
 
 
@@ -108,11 +109,7 @@ export default function Book() {
         </Info>
       </Container>
       <Container>
-        <form>
-          <button type="submit" onClick={handleSubmit}>
-            Get Book
-          </button>
-        </form>
+      <Button onClick={handleSubmit}>New Book</Button>
       </Container>    
     </div>
   );
