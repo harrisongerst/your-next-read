@@ -103,7 +103,7 @@ export default function Book() {
       <Container>
           <BookCover coverImg={book.volumeInfo.imageLinks.smallThumbnail} />
         <Info>
-          <BookInfo title={book.volumeInfo.title} authors={book.volumeInfo.authors}/>
+          <BookInfo title={book.volumeInfo.title} authors={book.volumeInfo.authors} description={book.volumeInfo.description} categories={book.volumeInfo.categories}/>
         </Info>
       </Container>
       <Container>
