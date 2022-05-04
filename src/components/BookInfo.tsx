@@ -6,17 +6,17 @@ interface infoProps {
 }
 
 export default function BookInfo({title, authors}: infoProps) {
-  console.log(authors)
-  let author: string | JSX.Element[] = "Unknown"
+  let authorList: string | JSX.Element[] = "Unknown"
   if(typeof(authors) != "undefined"){
-    author = authors.map((author) => 
-    <p>{author}</p>
+    authorList = authors.map((author, index) => 
+    <li key={index}>{author}</li>
   )
   }
   return (
     <div>
       <h3>{title}</h3>
-      {author}
+      <h4>Authors:</h4>
+      <ul>{authorList}</ul>
     </div>
   )
 }
